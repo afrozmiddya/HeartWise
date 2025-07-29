@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>HeartWise</title>
-    <link rel="icon" href="/resources/logo.png">
+    <link rel="icon" href="../resources/logo.png">
 </head>
 <body>
     <div class="header">
+      <a href="index.html">
         <div class="header-left">
-            <img src="/resources/logo.png" alt="null">
+            <img src="../resources/logo.png" alt="null">
             <h1>HeartWise</h1>
         </div>
-
+      </a>  
         <div class="header-right">
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#feature">Features</a></li>
                     <li><a href="#info">Information</a></li>
-                    <li><a href="/prediction">Prediction Tool</a></li>
-                    <li><a href="/resources">Resources</a></li>
+                    <li><a href="#prediction">Prediction Tool</a></li>
+                    <li><a href="#resources">Resources</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,14 +35,14 @@
             </div>
             <div class="left-bottom">
                 <h3>Our platform provides educational resources and an innovative tool to help you understand potential cardiovascular risk factors. Take a proactive step towards a healthier life.</h3>
-               <a href="/prediction"> <button>Let's Predict </button></a>
+               <a href="#prediction"> <button>Let's Predict </button></a>
             </div>
         </div>
         <div class="right">
-            <img src="/resources/heart.png" alt="null">
+            <img src="../resources/heart.png" alt="null">
         </div>
     </section>
-     <section class="features">
+    <section id="feature" class="features">
         <div class="feature">
     <div class="features-header">
       <span class="feature-label">Our Features</span>
@@ -52,23 +54,23 @@
     <div class="features-container">
       <div class="feature-card">
         <!-- <div class="icon">📖</div> -->
-        <h3><img src="/resources/book.png" alt=""> Informative Content</h3>
+        <h3><img src="../resources/book.png" alt=""> Informative Content</h3>
         <p>Access comprehensive articles and guides about cardiovascular health, risk factors, and preventive measures.</p>
       </div>
       <div class="feature-card">
         <!-- <div class="icon">🩺</div> -->
-        <h3><img src="/resources/stethoscope.png" alt=""> Prediction Tool</h3>
+        <h3><img src="../resources/stethoscope.png" alt=""> Prediction Tool</h3>
         <p>Use our interactive tool to get an illustrative assessment of your potential heart disease risk based on key health metrics.</p>
       </div>
       <div class="feature-card">
         <!-- <div class="icon">✅</div> -->
-        <h3><img src="/resources/resources.png" alt=""> Helpful Resources</h3>
+        <h3><img src="../resources/resources.png" alt=""> Helpful Resources</h3>
         <p>Find links to trusted external resources, including health organizations and support groups for further reading and support.</p>
       </div>
     </div>
     </div>
-  </section>
- <section id="info">
+</section>
+ <section id="info" class="info">
     <div class="info-header">
       <h1>Understanding Cardiovascular Health</h1>
       <p>Knowledge is the first step towards a healthy heart. Learn about heart disease, its risks, and how to prevent it.</p>
@@ -116,6 +118,115 @@
         </div>
         <div class="accordion-content">
           <p>If you experience chest pain, shortness of breath, dizziness, or unexplained fatigue, consult a healthcare provider promptly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="prediction" class="prediction">
+  
+  <div class="container">
+    <h1>Heart Disease Risk Prediction</h1>
+    <p class="subtitle">Enter your information below. This tool provides an illustrative risk stratification, not a medical diagnosis.</p>
+
+    <form id="riskForm" onsubmit="event.preventDefault(); alert('This is a demonstration. In a real application, this would calculate your risk factors.');">
+      <div class="grid">
+        <div><label>Age<br/><input type="number" id="age" required></label></div>
+        <div>
+          <label>Gender<br/>
+            <select id="gender" required>
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+        </div>
+        <div><label>Total Cholesterol (mg/dL)<br/><input type="number" id="cholesterol" required></label></div>
+        <div><label>Systolic Blood Pressure<br/><input type="number" id="systolic" required></label></div>
+        <div><label>Diastolic Blood Pressure<br/><input type="number" id="diastolic" required></label></div>
+      </div>
+
+      <div class="redio">
+      <div class="radio-section">
+        <label>Do you smoke?</label>
+        <label><input type="radio" name="smoke" value="yes" required> Yes</label>
+        <label><input type="radio" name="smoke" value="no"> No</label>
+      </div>
+
+      <div class="radio-section">
+        <label>Do you have diabetes?</label>
+        <label><input type="radio" name="diabetes" value="yes" required> Yes</label>
+        <label><input type="radio" name="diabetes" value="no"> No</label>
+      </div>
+
+      <div class="radio-section">
+        <label>Family history of heart disease?</label>
+        <label><input type="radio" name="family" value="yes" required> Yes</label>
+        <label><input type="radio" name="family" value="no"> No</label>
+      </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label>Weekly Exercise<br/>
+            <select id="exercise" required>
+              <option value="">Select exercise frequency</option>
+              <option value="none">None</option>
+              <option value="1-2">1-2 times/week</option>
+              <option value="3-5">3-5 times/week</option>
+              <option value="daily">Daily</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>Diet Quality<br/>
+            <select id="diet" required>
+              <option value="">Select diet quality</option>
+              <option value="poor">Poor</option>
+              <option value="average">Average</option>
+              <option value="good">Good</option>
+              <option value="excellent">Excellent</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer</strong><br/>
+        This tool is for informational purposes only and does not constitute medical advice. Consult with a healthcare professional for any health concerns.
+      </div>
+
+      <button type="submit" class="btn">Analyze Risk Factors</button>
+    </form>
+  </div>
+</section>
+  <section id="resources" class="resources">
+    <div class="container">
+      <h1>Helpful Resources</h1>
+      <p class="subtitle">Explore these trusted resources for more information about heart health.</p>
+      
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h3>American Heart Association</h3>
+          <p>Leading organization dedicated to fighting heart disease and stroke.</p>
+          <a href="https://www.heart.org/" target="_blank" class="resource-link">Visit Website</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>World Heart Federation</h3>
+          <p>Global organization committed to heart health for everyone.</p>
+          <a href="https://world-heart-federation.org/" target="_blank" class="resource-link">Visit Website</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>CDC Heart Disease</h3>
+          <p>Information from the Centers for Disease Control and Prevention.</p>
+          <a href="https://www.cdc.gov/heartdisease/" target="_blank" class="resource-link">Visit Website</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Heart Foundation</h3>
+          <p>Resources for heart health awareness and education.</p>
+          <a href="https://www.heartfoundation.org.au/" target="_blank" class="resource-link">Visit Website</a>
         </div>
       </div>
     </div>
