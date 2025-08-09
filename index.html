@@ -124,80 +124,113 @@
   </section>
   <section id="prediction" class="prediction">
   
-  <div class="container">
-    <h1>Heart Disease Risk Prediction</h1>
-    <p class="subtitle">Enter your information below. This tool provides an illustrative risk stratification, not a medical diagnosis.</p>
+<div class="container">
+  <h1>💙 Heart Health Assessment</h1>
+  <p class="subtitle">
+    Answer these simple questions about your health to assess your heart disease risk
+  </p>
 
-    <form id="riskForm" onsubmit="event.preventDefault(); alert('This is a demonstration. In a real application, this would calculate your risk factors.');">
-      <div class="grid">
-        <div><label>Age<br/><input type="number" id="age" required></label></div>
-        <div>
-          <label>Gender<br/>
-            <select id="gender" required>
-              <option value="">Select gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </label>
-        </div>
-        <div><label>Total Cholesterol (mg/dL)<br/><input type="number" id="cholesterol" required></label></div>
-        <div><label>Systolic Blood Pressure<br/><input type="number" id="systolic" required></label></div>
-        <div><label>Diastolic Blood Pressure<br/><input type="number" id="diastolic" required></label></div>
-      </div>
+  <form id="heartForm" onsubmit="event.preventDefault(); alert('Demo only — calculation not implemented');">
 
-      <div class="redio">
-      <div class="radio-section">
-        <label>Do you smoke?</label>
-        <label><input type="radio" name="smoke" value="yes" required> Yes</label>
-        <label><input type="radio" name="smoke" value="no"> No</label>
+    <!-- About You -->
+    <h2>📋 About You</h2>
+    <div class="grid">
+      <div>
+        <label>Your Age</label>
+        <input type="number" placeholder="45" required>
       </div>
+      <div>
+        <label>Gender</label>
+        <select required>
+          <option>Male</option>
+          <option selected>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
 
-      <div class="radio-section">
-        <label>Do you have diabetes?</label>
-        <label><input type="radio" name="diabetes" value="yes" required> Yes</label>
-        <label><input type="radio" name="diabetes" value="no"> No</label>
+    <!-- Your Health Numbers -->
+    <h2>🩺 Your Health Numbers</h2>
+    <div class="grid">
+      <div>
+        <label>Blood Pressure (when resting)</label>
+        <input type="number" placeholder="126">
+        <small>Normal is around 120</small>
       </div>
+      <div>
+        <label>Cholesterol Level</label>
+        <input type="number" placeholder="220">
+        <small>Normal is under 200</small>
+      </div>
+      <div>
+        <label>Highest Heart Rate During Exercise</label>
+        <input type="number" placeholder="189">
+        <small>Average is 60-100 at rest</small>
+      </div>
+      <div>
+        <label>Fasting Blood Sugar</label>
+        <select>
+          <option>No</option>
+          <option selected>Yes (high)</option>
+        </select>
+      </div>
+    </div>
 
-      <div class="radio-section">
-        <label>Family history of heart disease?</label>
-        <label><input type="radio" name="family" value="yes" required> Yes</label>
-        <label><input type="radio" name="family" value="no"> No</label>
+    <!-- Your Symptoms -->
+    <h2>💡 Your Symptoms</h2>
+    <div class="grid">
+      <div>
+        <label>Chest Pain or Discomfort</label>
+        <input type="text" placeholder="Tightness or pressure">
       </div>
+      <div>
+        <label>Chest Pain During Exercise</label>
+        <select>
+          <option>No</option>
+          <option selected>Yes</option>
+        </select>
       </div>
-      <div class="grid">
-        <div>
-          <label>Weekly Exercise<br/>
-            <select id="exercise" required>
-              <option value="">Select exercise frequency</option>
-              <option value="none">None</option>
-              <option value="1-2">1-2 times/week</option>
-              <option value="3-5">3-5 times/week</option>
-              <option value="daily">Daily</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>Diet Quality<br/>
-            <select id="diet" required>
-              <option value="">Select diet quality</option>
-              <option value="poor">Poor</option>
-              <option value="average">Average</option>
-              <option value="good">Good</option>
-              <option value="excellent">Excellent</option>
-            </select>
-          </label>
-        </div>
-      </div>
+    </div>
 
-      <div class="disclaimer">
-        <strong>⚠️ Disclaimer</strong><br/>
-        This tool is for informational purposes only and does not constitute medical advice. Consult with a healthcare professional for any health concerns.
+    <!-- Test Results -->
+    <h2>🧪 Test Results (if known)</h2>
+    <div class="grid">
+      <div>
+        <label>Resting ECG Results</label>
+        <input type="text" placeholder="Abnormal (ST-T changes)">
       </div>
+      <div>
+        <label>Exercise ECG Changes</label>
+        <input type="number" placeholder="5">
+        <small>How much ST segment depression during exercise? (0 = none)</small>
+      </div>
+      <div>
+        <label>Exercise ECG Pattern</label>
+        <input type="text" placeholder="Flat">
+      </div>
+      <div>
+        <label>Blocked Heart Vessels</label>
+        <input type="number" placeholder="2">
+      </div>
+    </div>
 
-      <button type="submit" class="btn">Analyze Risk Factors</button>
-    </form>
-  </div>
+    <!-- Blood Health -->
+    <h2>🩸 Blood Health</h2>
+    <div>
+      <label>Blood Flow During Exercise</label>
+      <input type="text" placeholder="Reversible defect (flow improves with rest)">
+    </div>
+
+    <!-- Button -->
+    <button type="submit" class="btn">Check My Heart Health</button>
+
+    <p class="note">
+      ⚠️ This assessment is not a substitute for professional medical advice
+    </p>
+
+  </form>
+</div>
+
 </section>
   <section id="resources" class="resources">
     <div class="container">

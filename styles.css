@@ -271,7 +271,7 @@ background: linear-gradient(0deg, rgba(255, 232, 232, 1) 0%, rgba(240, 163, 168,
 
 .prediction{
     width: 100%;
-    height: 110vh;
+    /* height: 110vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,9 +285,7 @@ background: linear-gradient(0deg, rgba(255, 232, 232, 1) 0%, rgba(240, 163, 168,
   .container {
     max-width: 100%;
     max-height: 100%;
-    margin: 4rem auto;
-    background: white;
-    background: #d93636;
+    margin: 3rem auto;
     background: linear-gradient(146deg, rgba(217, 54, 54, 1) 0%, rgba(240, 163, 168, 1) 50%, rgba(250, 247, 247, 1) 100%);    padding: 2rem;
   padding: 30px 40px;
   border-radius: 10px;
@@ -314,7 +312,7 @@ h1 {
 }
 
 input, select {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-top: 5px;
   border-radius: 6px;
@@ -345,6 +343,7 @@ input, select {
 }
 
 .btn {
+  margin-top: 1.2rem;
   background-color: #28a745;
   color: white;
   padding: 14px 20px;
